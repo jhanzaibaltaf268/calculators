@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>CalcHub - Free Online Calculators | Basic, Scientific, BMI, Loan & More</title>
+    <meta name="description"
+        content="Free online calculators for every need. Basic, Scientific, BMI, Loan/EMI, Age, Percentage, Unit Converter & Discount calculators. Fast, accurate, mobile-friendly.">
+    <meta name="keywords"
+        content="calculator, online calculator, scientific calculator, BMI calculator, loan calculator, EMI calculator, age calculator, percentage calculator, unit converter, discount calculator, free calculator">
+    <meta name="author" content="CalcHub">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a0a1a">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://calchub.com/">
+    <meta property="og:title" content="CalcHub - Free Online Calculators | 8+ Calculator Tools">
+    <meta property="og:description"
+        content="Free online calculators for every need. Basic, Scientific, BMI, Loan, Age, Percentage, Unit Converter & Discount calculators.">
+    <meta property="og:image" content="https://calchub.com/og-image.png">
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="CalcHub - Free Online Calculators">
+    <meta name="twitter:description" content="Free online calculators for every need. 8+ calculator tools available.">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://calchub.com/">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/calculator.css">
+
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "CalcHub",
+        "url": "https://calchub.com",
+        "description": "Free online calculators for every need including basic, scientific, BMI, loan, age, percentage, unit converter and discount calculators.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Any",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.8",
+            "ratingCount": "12500"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [{
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://calchub.com/"
+        }]
+    }
+    </script>
+</head>
+
+<body>
+    <!-- Skip Navigation for Accessibility -->
+    <a href="#main-content" class="skip-link" id="skip-nav">Skip to main content</a>
+
+    <!-- Header -->
+    <header class="header" id="site-header" role="banner">
+        <div class="header-container">
+            <a href="#" class="logo" id="site-logo" aria-label="CalcHub Home">
+                <span class="logo-icon">🧮</span>
+                <span class="logo-text">Calc<span class="logo-accent">Hub</span></span>
+            </a>
+            <nav class="header-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+                <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-links" id="nav-links">
+                    <li><a href="#calculators" data-i18n="nav_calculators">Calculators</a></li>
+                    <li><a href="#features" data-i18n="nav_features">Features</a></li>
+                    <li><a href="#faq" data-i18n="nav_faq">FAQ</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <!-- Language Selector -->
+                <div class="lang-selector" id="language-selector">
+                    <button class="lang-btn" id="lang-toggle" aria-label="Select Language" aria-expanded="false">
+                        <span class="lang-flag" id="current-lang-flag">🌐</span>
+                        <span class="lang-name" id="current-lang-name">EN</span>
+                        <svg class="lang-arrow" width="12" height="12" viewBox="0 0 12 12">
+                            <path d="M3 5l3 3 3-3" stroke="currentColor" stroke-width="1.5" fill="none" />
+                        </svg>
+                    </button>
+                    <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Language options">
+                        <button class="lang-option active" data-lang="en" role="option" aria-selected="true">
+                            <span>🇬🇧</span> English
+                        </button>
+                        <button class="lang-option" data-lang="ur" role="option" aria-selected="false">
+                            <span>🇵🇰</span> اردو
+                        </button>
+                        <button class="lang-option" data-lang="ar" role="option" aria-selected="false">
+                            <span>🇸🇦</span> العربية
+                        </button>
+                        <button class="lang-option" data-lang="hi" role="option" aria-selected="false">
+                            <span>🇮🇳</span> हिन्दी
+                        </button>
+                        <button class="lang-option" data-lang="es" role="option" aria-selected="false">
+                            <span>🇪🇸</span> Español
+                        </button>
+                        <button class="lang-option" data-lang="fr" role="option" aria-selected="false">
+                            <span>🇫🇷</span> Français
+                        </button>
+                    </div>
+                </div>
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark/light theme">
+                    <span class="theme-icon">🌙</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Nav Overlay -->
+    <div class="mobile-nav-overlay" id="mobile-nav-overlay"></div>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero-section">
+        <div class="hero-bg">
+            <div class="hero-orb hero-orb-1"></div>
+            <div class="hero-orb hero-orb-2"></div>
+            <div class="hero-orb hero-orb-3"></div>
+            <div class="hero-grid"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-badge" data-i18n="hero_badge">⚡ 8+ Free Calculators</div>
+            <h1 class="hero-title" data-i18n="hero_title">All Your <span class="gradient-text">Calculators</span> in One
+                Place</h1>
+            <p class="hero-subtitle" data-i18n="hero_subtitle">Fast, accurate, and beautifully designed calculators for
+                every need. From basic math to scientific formulas, financial planning to health metrics.</p>
+            <div class="hero-actions">
+                <a href="#calculators" class="btn btn-primary" id="hero-cta" data-i18n="hero_cta">
+                    <span>Explore Calculators</span>
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <path d="M7 4l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number" data-count="8">0</span><span class="stat-plus">+</span>
+                    <span class="stat-label" data-i18n="stat_calculators">Calculators</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number" data-count="6">0</span>
+                    <span class="stat-label" data-i18n="stat_languages">Languages</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">100</span><span class="stat-plus">%</span>
+                    <span class="stat-label" data-i18n="stat_free">Free</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main id="main-content" role="main">
+        <!-- Calculator Cards Grid -->
+        <section class="calculators-section" id="calculators" aria-labelledby="calculators-heading">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="section_tools">🔧 Tools</span>
+                    <h2 class="section-title" id="calculators-heading" data-i18n="section_calculators_title">Choose Your
+                        Calculator</h2>
+                    <p class="section-desc" data-i18n="section_calculators_desc">Select from our range of
+                        professional-grade calculators designed for accuracy and ease of use.</p>
+                </div>
+                <div class="calc-grid" id="calc-grid">
+                    <!-- Basic Calculator Card -->
+                    <article class="calc-card" data-calculator="basic" id="card-basic" tabindex="0" role="button"
+                        aria-label="Open Basic Calculator">
+                        <div class="calc-card-glow"></div>
+                        <div class="calc-card-icon">🔢</div>
+                        <h3 class="calc-card-title" data-i18n="calc_basic">Basic Calculator</h3>
+                        <p class="calc-card-desc" data-i18n="calc_basic_desc">Addition, subtraction, multiplication,
+                            division and more.</p>
+                        <span class="calc-card-arrow">→</span>
+                    </article>
+                    <!-- Scientific Calculator Card -->
+                    <article class="calc-card" data-calculator="scientific" id="card-scientific" tabindex="0"
+                        role="button" aria-label="Open Scientific Calculator">
+                        <div class="calc-card-glow"></div>
+                        <div class="calc-card-icon">🧪</div>
+                        <h3 class="calc-card-title" data-i18n="calc_scientific">Scientific Calculator</h3>
+                        <p class="calc-card-desc" data-i18n="calc_scientific_desc">Trigonometry, logarithms, powers,
+                            roots, and advanced functions.</p>
+                        <span class="calc-card-arrow">→</span>
+                    </article>
+                    <!-- Loan/EMI Calculator Card -->
+                    <article class="calc-card" data-calculator="loan" id="card-loan" tabindex="0" role="button"
+                        aria-label="Open Loan Calculator">
+                        <div class="calc-card-glow"></div>
+                        <div class="calc-card-icon">💰</div>
+                        <h3 class="calc-card-title" data-i18n="calc_loan">Loan / EMI Calculator</h3>
+                        <p class="calc-card-desc" data-i18n="calc_loan_desc">Calculate monthly payments, total interest,
+                            and amortization.</p>
+                        <span class="calc-card-arrow">→</span>
+                    </article>
+                    <!-- BMI Calculator Card -->
+                    <article class="calc-card" data-calculator="bmi" id="card-bmi" tabindex="0" role="button"
+                        aria-label="Open BMI Calculator">
+                        <div class="calc-card-glow"></div>
+                        <div class="calc-card-icon">📊</div>
+                        <h3 class="calc-card-title" data-i18n="calc_bmi">BMI Calculator</h3>
+                        <p class="calc-card-desc" data-i18n="calc_bmi_desc">Calculate your Body Mass Index and check
+                            your health status.</p>
+                        <span class="calc-card-arrow">→</span>
+                    </article>
+                    <!-- Age Calculator Card -->
+                    <article class="calc-card" data-calculator="age" id="card-age" tabindex="0" role="button"
+                        aria-label="Open Age Calculator">
+                        <div class="calc-card-glow"></div>
+                        <div class="calc-card-icon">📅</div>
+                        <h3 class="calc-card-title" data-i18n="calc_age">Age Calculator</h3>
+                        <p class="calc-card-desc" data-i18n="calc_age_desc">Calculate exact age in years, months, days,
+                            hours, and minutes.</p>
+                        <span class="calc-card-arrow">→</span>
+                    </article>
+                    <!-- Percentage Calculator Card -->
+                    <article class="calc-card" data-calculator="percentage" id="card-percentage" tabindex="0"
+                        role="button" aria-label="Open Percentage Calculator">
+                        <div class="calc-card-glow"></div>
+                        <div class="calc-card-icon">💱</div>
+                        <h3 class="calc-card-title" data-i18n="calc_percentage">Percentage Calculator</h3>
+                        <p class="calc-card-desc" data-i18n="calc_percentage_desc">Find percentages, increases,
+                            decreases, and ratios easily.</p>
+                        <span class="calc-card-arrow">→</span>
+                    </article>
+                    <!-- Unit Converter Card -->
+                    <article class="calc-card" data-calculator="unit" id="card-unit" tabindex="0" role="button"
+                        aria-label="Open Unit Converter">
+                        <div class="calc-card-glow"></div>
+                        <div class="calc-card-icon">📐</div>
+                        <h3 class="calc-card-title" data-i18n="calc_unit">Unit Converter</h3>
+                        <p class="calc-card-desc" data-i18n="calc_unit_desc">Convert length, weight, temperature, speed,
+                            and more units.</p>
+                        <span class="calc-card-arrow">→</span>
+                    </article>
+                    <!-- Discount Calculator Card -->
+                    <article class="calc-card" data-calculator="discount" id="card-discount" tabindex="0" role="button"
+                        aria-label="Open Discount Calculator">
+                        <div class="calc-card-glow"></div>
+                        <div class="calc-card-icon">💸</div>
+                        <h3 class="calc-card-title" data-i18n="calc_discount">Discount Calculator</h3>
+                        <p class="calc-card-desc" data-i18n="calc_discount_desc">Calculate sale prices, savings, and
+                            discount percentages.</p>
+                        <span class="calc-card-arrow">→</span>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Calculator Modal / Panel -->
+        <div class="calc-modal-overlay" id="calc-modal-overlay" role="dialog" aria-modal="true" aria-label="Calculator">
+            <div class="calc-modal" id="calc-modal">
+                <div class="calc-modal-header">
+                    <button class="calc-modal-back" id="calc-modal-back" aria-label="Close calculator">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                            <path d="M19 12H5m0 0l6-6m-6 6l6 6" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <h2 class="calc-modal-title" id="calc-modal-title">Calculator</h2>
+                    <div class="calc-modal-actions">
+                        <button class="calc-history-btn" id="calc-history-btn" aria-label="View history">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                                <path d="M10 6v4l3 2m5-2a8 8 0 11-2.343-5.657" stroke="currentColor" stroke-width="1.5"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="calc-modal-body" id="calc-modal-body">
+                    <!-- Dynamic calculator content injected here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Features Section -->
+        <section class="features-section" id="features" aria-labelledby="features-heading">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="section_why">✨ Why CalcHub</span>
+                    <h2 class="section-title" id="features-heading" data-i18n="features_title">Built for Everyone</h2>
+                    <p class="section-desc" data-i18n="features_desc">Professional-grade calculators with a beautiful,
+                        intuitive interface that works anywhere.</p>
+                </div>
+                <div class="features-grid">
+                    <div class="feature-card" id="feature-mobile">
+                        <div class="feature-icon">📱</div>
+                        <h3 data-i18n="feature_mobile">Mobile First</h3>
+                        <p data-i18n="feature_mobile_desc">Designed for touch screens first, works beautifully on all
+                            devices.</p>
+                    </div>
+                    <div class="feature-card" id="feature-fast">
+                        <div class="feature-icon">⚡</div>
+                        <h3 data-i18n="feature_fast">Lightning Fast</h3>
+                        <p data-i18n="feature_fast_desc">Instant calculations with zero lag. No server requests needed.
+                        </p>
+                    </div>
+                    <div class="feature-card" id="feature-accurate">
+                        <div class="feature-icon">🎯</div>
+                        <h3 data-i18n="feature_accurate">Precision Accurate</h3>
+                        <p data-i18n="feature_accurate_desc">High-precision calculations you can trust for important
+                            decisions.</p>
+                    </div>
+                    <div class="feature-card" id="feature-multilang">
+                        <div class="feature-icon">🌍</div>
+                        <h3 data-i18n="feature_multilang">Multi-Language</h3>
+                        <p data-i18n="feature_multilang_desc">Available in 6 languages including English, Urdu, Arabic,
+                            Hindi, Spanish & French.</p>
+                    </div>
+                    <div class="feature-card" id="feature-free">
+                        <div class="feature-icon">🆓</div>
+                        <h3 data-i18n="feature_free">100% Free</h3>
+                        <p data-i18n="feature_free_desc">All calculators are completely free with no hidden charges or
+                            ads.</p>
+                    </div>
+                    <div class="feature-card" id="feature-offline">
+                        <div class="feature-icon">📶</div>
+                        <h3 data-i18n="feature_offline">Works Offline</h3>
+                        <p data-i18n="feature_offline_desc">All calculations run locally in your browser. No internet
+                            required.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section for SEO -->
+        <section class="faq-section" id="faq" aria-labelledby="faq-heading">
+            <div class="section-container">
+                <div class="section-header">
+                    <span class="section-tag" data-i18n="section_faq_tag">❓ FAQ</span>
+                    <h2 class="section-title" id="faq-heading" data-i18n="faq_title">Frequently Asked Questions</h2>
+                </div>
+                <div class="faq-list" id="faq-list" itemscope itemtype="https://schema.org/FAQPage">
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary class="faq-question" itemprop="name" data-i18n="faq_q1">Is CalcHub completely free to
+                            use?</summary>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text" data-i18n="faq_a1">Yes! CalcHub is 100% free for everyone. All
+                                calculators are available without any registration, subscription, or hidden fees. We
+                                believe useful tools should be accessible to everyone.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary class="faq-question" itemprop="name" data-i18n="faq_q2">How accurate are the
+                            calculators?</summary>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text" data-i18n="faq_a2">Our calculators use standard JavaScript math
+                                operations with high precision floating-point arithmetic. Results are accurate for
+                                everyday and professional use. For the scientific calculator, we support up to 15
+                                significant digits.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary class="faq-question" itemprop="name" data-i18n="faq_q3">Does CalcHub work on mobile
+                            devices?</summary>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text" data-i18n="faq_a3">Absolutely! CalcHub is designed mobile-first, meaning
+                                it works perfectly on smartphones and tablets. The interface adapts to your screen size
+                                for the best possible experience.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary class="faq-question" itemprop="name" data-i18n="faq_q4">What languages are supported?
+                        </summary>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text" data-i18n="faq_a4">CalcHub supports 6 languages: English, Urdu (اردو),
+                                Arabic (العربية), Hindi (हिन्दी), Spanish (Español), and French (Français). You can
+                                switch languages anytime using the language selector in the header.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary class="faq-question" itemprop="name" data-i18n="faq_q5">Do I need to create an account?
+                        </summary>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text" data-i18n="faq_a5">No! CalcHub works instantly without any registration.
+                                Just open the website and start calculating. Your calculation history is stored locally
+                                in your browser for convenience.</p>
+                        </div>
+                    </details>
+                    <details class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                        <summary class="faq-question" itemprop="name" data-i18n="faq_q6">Can I use CalcHub offline?
+                        </summary>
+                        <div class="faq-answer" itemscope itemprop="acceptedAnswer"
+                            itemtype="https://schema.org/Answer">
+                            <p itemprop="text" data-i18n="faq_a6">Yes! All calculations are performed locally in your
+                                browser using JavaScript. Once the page is loaded, you can use all calculators without
+                                an internet connection.</p>
+                        </div>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" id="site-footer" role="contentinfo">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-brand">
+                    <a href="#" class="logo" aria-label="CalcHub Home">
+                        <span class="logo-icon">🧮</span>
+                        <span class="logo-text">Calc<span class="logo-accent">Hub</span></span>
+                    </a>
+                    <p class="footer-tagline" data-i18n="footer_tagline">All your calculators in one beautiful place.
+                    </p>
+                </div>
+                <div class="footer-links-group">
+                    <h4 data-i18n="footer_calculators">Calculators</h4>
+                    <ul>
+                        <li><a href="#" data-calculator="basic" data-i18n="calc_basic">Basic Calculator</a></li>
+                        <li><a href="#" data-calculator="scientific" data-i18n="calc_scientific">Scientific
+                                Calculator</a></li>
+                        <li><a href="#" data-calculator="loan" data-i18n="calc_loan">Loan / EMI Calculator</a></li>
+                        <li><a href="#" data-calculator="bmi" data-i18n="calc_bmi">BMI Calculator</a></li>
+                    </ul>
+                </div>
+                <div class="footer-links-group">
+                    <h4 data-i18n="footer_more_tools">More Tools</h4>
+                    <ul>
+                        <li><a href="#" data-calculator="age" data-i18n="calc_age">Age Calculator</a></li>
+                        <li><a href="#" data-calculator="percentage" data-i18n="calc_percentage">Percentage
+                                Calculator</a></li>
+                        <li><a href="#" data-calculator="unit" data-i18n="calc_unit">Unit Converter</a></li>
+                        <li><a href="#" data-calculator="discount" data-i18n="calc_discount">Discount Calculator</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p data-i18n="footer_copy">&copy; 2026 CalcHub. All rights reserved. Free online calculators.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/i18n.js"></script>
+    <script src="js/calculators.js"></script>
+    <script src="js/app.js"></script>
+</body>
+
+</html>
